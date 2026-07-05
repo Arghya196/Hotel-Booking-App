@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// Base API URL
+
 const API_URL = "https://demohotelsapi.pythonanywhere.com/hotels/";
 
 function HotelList() {
-  // ===== State variables =====
+  
   const [hotels, setHotels] = useState([]);
   const [statusMsg, setStatusMsg] = useState("Loading hotels...");
   const [searchInput, setSearchInput] = useState("");
   const [locationFilter, setLocationFilter] = useState("");
   const [sortFilter, setSortFilter] = useState("");
 
-  // ===== Function to fetch hotels from the API =====
+  
   const fetchHotels = async () => {
     setStatusMsg("Loading hotels...");
 
-    // Build query params dynamically
+    
     const params = new URLSearchParams();
     if (searchInput.trim()) params.append("search", searchInput.trim());
     if (locationFilter) params.append("location", locationFilter);
@@ -41,29 +41,29 @@ function HotelList() {
     }
   };
 
-  // ===== Load all hotels when the page first opens =====
+  
   useEffect(() => {
     fetchHotels();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
-  // ===== Handle "Enter" key press inside search box =====
+  
   const handleKeyUp = (e) => {
     if (e.key === "Enter") fetchHotels();
   };
 
-  // ===== Reset all filters =====
+  
   const handleReset = () => {
     setSearchInput("");
     setLocationFilter("");
     setSortFilter("");
-    // fetchHotels will be called manually since we reset state above
+    
     setTimeout(fetchHotels, 0);
   };
 
   return (
     <>
-      {/* ===== Hero Section ===== */}
+      {}
       <section className="hero">
         <div className="hero-overlay">
           <h1>Discover Your Perfect Stay</h1>
@@ -72,7 +72,7 @@ function HotelList() {
         </div>
       </section>
 
-      {/* ===== Search & Filter Section ===== */}
+      {}
       <section className="search-section" id="search-section">
         <div className="search-box">
           <input
@@ -115,10 +115,10 @@ function HotelList() {
         </div>
       </section>
 
-      {/* ===== Status Message ===== */}
+      {}
       <p className="status-msg">{statusMsg}</p>
 
-      {/* ===== Hotel Cards Grid ===== */}
+      {}
       <main className="hotel-grid">
         {hotels.map((hotel) => (
           <div className="hotel-card" key={hotel.id}>

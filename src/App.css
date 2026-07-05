@@ -1,9 +1,7 @@
-/* ===== Google Fonts ===== */
-/* Playfair Display -> elegant serif for headings */
-/* Inter -> clean sans-serif for body text */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* ===== CSS Variables (change these to re-theme everything) ===== */
+
 :root {
   --navy: #1c2b39;
   --navy-light: #2c4257;
@@ -16,7 +14,7 @@
   --white: #ffffff;
 }
 
-/* ===== Basic Reset ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +31,7 @@ h1, h2, h3, .logo {
   font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* ===== Navbar ===== */
+
 .navbar {
   background: var(--navy);
   color: var(--white);
@@ -77,7 +75,7 @@ h1, h2, h3, .logo {
   color: var(--gold);
 }
 
-/* ===== Hero Section ===== */
+
 .hero {
   position: relative;
   height: 60vh;
@@ -136,7 +134,7 @@ h1, h2, h3, .logo {
   }
 }
 
-/* ===== Search Section ===== */
+
 .search-section {
   max-width: 1100px;
   margin: 35px auto;
@@ -201,7 +199,7 @@ h1, h2, h3, .logo {
   cursor: pointer;
 }
 
-/* ===== Status Message ===== */
+
 .status-msg {
   text-align: center;
   margin: 22px;
@@ -210,7 +208,7 @@ h1, h2, h3, .logo {
   letter-spacing: 0.3px;
 }
 
-/* ===== Hotel Grid ===== */
+
 .hotel-grid {
   max-width: 1100px;
   margin: 0 auto;
@@ -220,7 +218,7 @@ h1, h2, h3, .logo {
   gap: 26px;
 }
 
-/* ===== Hotel Card ===== */
+
 .hotel-card {
   background: var(--white);
   border-radius: 6px;
@@ -298,7 +296,7 @@ h1, h2, h3, .logo {
   color: var(--white);
 }
 
-/* ===== Hotel Detail Page ===== */
+
 .detail-container {
   max-width: 880px;
   margin: 35px auto;
@@ -392,7 +390,7 @@ h1, h2, h3, .logo {
   background: #98753f;
 }
 
-/* ===== Footer ===== */
+
 .footer {
   text-align: center;
   padding: 22px;
@@ -402,7 +400,7 @@ h1, h2, h3, .logo {
   letter-spacing: 0.3px;
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;

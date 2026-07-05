@@ -16,8 +16,7 @@ function HotelDetails() {
         const response = await fetch(API_URL + id + "/");
         const result = await response.json();
 
-        // API wraps the hotel object inside "data"
-        // (handles both cases: data as a single object OR data as an array with one item)
+        
         let hotelData = result.data;
         if (Array.isArray(hotelData)) {
           hotelData = hotelData[0];
